@@ -1,0 +1,142 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_LayoutIdentity";
+}
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>Sea Booking</title>
+
+    <meta name="description" content="blank page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="" type="">
+
+    <!--Basic Styles-->
+    <link href="~/assets/css/style2.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="../fonts.googleapis.com/css@family=open+sans_3a300italic,400italic,600italic,700italic,400,600,700,300.css"
+          rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="~/assets/css/beyond.min.css" rel="stylesheet" />
+    <link href="~/assets/css/demo.min.css" rel="stylesheet" />
+    <link href="~/assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="~/assets/css/animate.min.css" rel="stylesheet" />
+    <link id="~/skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="~/assets/js/skins.min.js"></script>
+</head>
+<!-- /Head -->
+<body>
+    <div class="swiper-container swiper-slider swiper-container-horizontal swiper-container-fade" data-height="" data-simulate-touch="false" data-slide-effect="fade">
+        <div class="swiper-wrapper" style="transition-duration: 0ms;">
+
+        </div>
+        <div class="swiper-caption-absolute">
+
+            <div class="swiper-bottom-panel" style="height:41px;">
+                <div class="swiper-bottom-panel-svg-wrap">
+                    <svg width="104" height="33">
+                        <path style="fill:#ffffff;fill-opacity:1" d="m 0.01291655,16.605668 0,-16.62382923 5.25000005,0.439007 C 12.962198,1.0646618 18.007648,4.7929098 22.364223,13.057557 c 6.80539,12.91018 16.468604,19.152403 29.648693,19.152403 13.180088,0 22.843308,-6.242223 29.648698,-19.152403 4.35657,-8.2646472 9.40202,-11.9928952 17.1013,-12.63671123 l 5.250006,-0.439007 0,16.62382923 0,16.62383 -52.000004,0 -51.99999945,0 0,-16.62383 z"></path>
+                    </svg>
+                    <span class="icon material-icons-ico material-icons-expand_more text-white"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div>
+            <img class="background_img" src="~/assets/img/pic2.jpg">
+        </div>
+    </div>
+    <br>
+    <div class="login-container animated fadeInDown">
+        <div class="loginbox bg-white">
+            <form id="account" method="post">
+
+                <div class="loginbox-title">SIGN IN</div>
+                <br>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <br>
+                <div class="loginbox-textbox">
+                    <label asp-for="Input.UserName"></label>
+                    <input asp-for="Input.UserName" class="form-control" placeholder="User Name" />
+                    <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="loginbox-textbox">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <br>
+                <br>
+                <div class="loginbox-submit">
+                    <input type="submit" class="btn btn-primary btn-block" value="Login">
+                </div>
+                <br>
+            </form>
+        </div>
+
+    </div>
+
+    <div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div>
+        <script src="~/assets/js/jquery.min.js"></script>
+        <script src="~/assets/js/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!--Beyond Scripts-->
+        <script src="~/assets/js/beyond.min.js"></script>
+    </div>
+    @*<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+    </script>*@
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

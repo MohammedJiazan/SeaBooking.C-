@@ -1,0 +1,255 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-sea_booking-27786A4B-92C9-496B-A275-48A5C6038811</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\booking-reports.cshtml" />
+    <Content Remove="Views\Home\statistical-report.cshtml" />
+    <Content Remove="Views\Trips\closed-trip.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Bookings\new-tickets.cshtml" />
+    <None Include="Views\Bookings\old-tickets.cshtml" />
+    <None Include="Views\Home\booking-reports.cshtml" />
+    <None Include="Views\Home\statistical-report.cshtml" />
+    <None Include="Views\Trips\closed-trip.cshtml" />
+    <None Include="wwwroot\assets\css\beyond-less\400-500.less" />
+    <None Include="wwwroot\assets\css\beyond-less\accordions.less" />
+    <None Include="wwwroot\assets\css\beyond-less\alerts.less" />
+    <None Include="wwwroot\assets\css\beyond-less\angular-daterangepicker.less" />
+    <None Include="wwwroot\assets\css\beyond-less\angular-slider.less" />
+    <None Include="wwwroot\assets\css\beyond-less\angular-treeview.less" />
+    <None Include="wwwroot\assets\css\beyond-less\animations.less" />
+    <None Include="wwwroot\assets\css\beyond-less\body.less" />
+    <None Include="wwwroot\assets\css\beyond-less\breadcrumbs.less" />
+    <None Include="wwwroot\assets\css\beyond-less\buttons.less" />
+    <None Include="wwwroot\assets\css\beyond-less\charts.less" />
+    <None Include="wwwroot\assets\css\beyond-less\chat.less" />
+    <None Include="wwwroot\assets\css\beyond-less\checkbox-radiobox.less" />
+    <None Include="wwwroot\assets\css\beyond-less\colorpicker.less" />
+    <None Include="wwwroot\assets\css\beyond-less\colors.less" />
+    <None Include="wwwroot\assets\css\beyond-less\comment.less" />
+    <None Include="wwwroot\assets\css\beyond-less\dashboard.less" />
+    <None Include="wwwroot\assets\css\beyond-less\databoxes.less" />
+    <None Include="wwwroot\assets\css\beyond-less\datepicker.less" />
+    <None Include="wwwroot\assets\css\beyond-less\dropdowns.less" />
+    <None Include="wwwroot\assets\css\beyond-less\dropzone.less" />
+    <None Include="wwwroot\assets\css\beyond-less\editors.less" />
+    <None Include="wwwroot\assets\css\beyond-less\fonts.less" />
+    <None Include="wwwroot\assets\css\beyond-less\forms-inputs.less" />
+    <None Include="wwwroot\assets\css\beyond-less\fullcalendar.less" />
+    <None Include="wwwroot\assets\css\beyond-less\helpers.less" />
+    <None Include="wwwroot\assets\css\beyond-less\invoice.less" />
+    <None Include="wwwroot\assets\css\beyond-less\labels-badges.less" />
+    <None Include="wwwroot\assets\css\beyond-less\loading.less" />
+    <None Include="wwwroot\assets\css\beyond-less\lockscreen.less" />
+    <None Include="wwwroot\assets\css\beyond-less\login.less" />
+    <None Include="wwwroot\assets\css\beyond-less\mail.less" />
+    <None Include="wwwroot\assets\css\beyond-less\main-container.less" />
+    <None Include="wwwroot\assets\css\beyond-less\modals.less" />
+    <None Include="wwwroot\assets\css\beyond-less\navbar.less" />
+    <None Include="wwwroot\assets\css\beyond-less\nestable-lists.less" />
+    <None Include="wwwroot\assets\css\beyond-less\ng-tags-input.less" />
+    <None Include="wwwroot\assets\css\beyond-less\notifications.less" />
+    <None Include="wwwroot\assets\css\beyond-less\orders.less" />
+    <None Include="wwwroot\assets\css\beyond-less\page-content.less" />
+    <None Include="wwwroot\assets\css\beyond-less\page-header-body.less" />
+    <None Include="wwwroot\assets\css\beyond-less\pagination.less" />
+    <None Include="wwwroot\assets\css\beyond-less\popovers.less" />
+    <None Include="wwwroot\assets\css\beyond-less\pricing.less" />
+    <None Include="wwwroot\assets\css\beyond-less\profile.less" />
+    <None Include="wwwroot\assets\css\beyond-less\progressbars.less" />
+    <None Include="wwwroot\assets\css\beyond-less\register.less" />
+    <None Include="wwwroot\assets\css\beyond-less\search-help-bar.less" />
+    <None Include="wwwroot\assets\css\beyond-less\select2.less" />
+    <None Include="wwwroot\assets\css\beyond-less\sidebar.less" />
+    <None Include="wwwroot\assets\css\beyond-less\sliders.less" />
+    <None Include="wwwroot\assets\css\beyond-less\spaces.less" />
+    <None Include="wwwroot\assets\css\beyond-less\spinners.less" />
+    <None Include="wwwroot\assets\css\beyond-less\switches.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tables.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tabs.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tagsinput.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tasks.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tickets.less" />
+    <None Include="wwwroot\assets\css\beyond-less\timeline.less" />
+    <None Include="wwwroot\assets\css\beyond-less\timepicker.less" />
+    <None Include="wwwroot\assets\css\beyond-less\tooltips.less" />
+    <None Include="wwwroot\assets\css\beyond-less\treeview.less" />
+    <None Include="wwwroot\assets\css\beyond-less\typography.less" />
+    <None Include="wwwroot\assets\css\beyond-less\validator.less" />
+    <None Include="wwwroot\assets\css\beyond-less\variables.less" />
+    <None Include="wwwroot\assets\css\beyond-less\wells.less" />
+    <None Include="wwwroot\assets\css\beyond-less\widget.less" />
+    <None Include="wwwroot\assets\css\beyond-less\wizards.less" />
+    <None Include="wwwroot\assets\css\beyond-rtl.css.map" />
+    <None Include="wwwroot\assets\css\beyond.css.map" />
+    <None Include="wwwroot\assets\css\beyond.less" />
+    <None Include="wwwroot\assets\css\bootstrap-rtl.css.map" />
+    <None Include="wwwroot\assets\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\css\demo.css.map" />
+    <None Include="wwwroot\assets\css\demo.less" />
+    <None Include="wwwroot\assets\css\other-less\lesshat.less" />
+    <None Include="wwwroot\assets\css\skins\azure.css.map" />
+    <None Include="wwwroot\assets\css\skins\azure.less" />
+    <None Include="wwwroot\assets\css\skins\black.css.map" />
+    <None Include="wwwroot\assets\css\skins\black.less" />
+    <None Include="wwwroot\assets\css\skins\Blue.css.map" />
+    <None Include="wwwroot\assets\css\skins\Blue.less" />
+    <None Include="wwwroot\assets\css\skins\darkblue.css.map" />
+    <None Include="wwwroot\assets\css\skins\darkblue.less" />
+    <None Include="wwwroot\assets\css\skins\darkred.css.map" />
+    <None Include="wwwroot\assets\css\skins\darkred.less" />
+    <None Include="wwwroot\assets\css\skins\deepblue.css.map" />
+    <None Include="wwwroot\assets\css\skins\deepblue.less" />
+    <None Include="wwwroot\assets\css\skins\gray.css.map" />
+    <None Include="wwwroot\assets\css\skins\gray.less" />
+    <None Include="wwwroot\assets\css\skins\green.css.map" />
+    <None Include="wwwroot\assets\css\skins\green.less" />
+    <None Include="wwwroot\assets\css\skins\orange.css.map" />
+    <None Include="wwwroot\assets\css\skins\orange.less" />
+    <None Include="wwwroot\assets\css\skins\pink.css.map" />
+    <None Include="wwwroot\assets\css\skins\pink.less" />
+    <None Include="wwwroot\assets\css\skins\purple.css.map" />
+    <None Include="wwwroot\assets\css\skins\purple.less" />
+    <None Include="wwwroot\assets\css\skins\skins-mixins.css.map" />
+    <None Include="wwwroot\assets\css\skins\skins-mixins.less" />
+    <None Include="wwwroot\assets\css\skins\teal.css.map" />
+    <None Include="wwwroot\assets\css\skins\teal.less" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.eot%40" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.eot%40v=4.3.0" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.ttf%40v=4.3.0" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff%40v=4.3.0" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff2%40v=4.3.0" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.eot%40" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\assets\fonts\typicons.eot%40" />
+    <None Include="wwwroot\assets\fonts\typicons.svg" />
+    <None Include="wwwroot\assets\fonts\weathericons-regular-webfont.eot%40" />
+    <None Include="wwwroot\assets\fonts\weathericons-regular-webfont.svg" />
+    <None Include="wwwroot\assets\js\beyond.js" />
+    <None Include="wwwroot\assets\js\beyond.min.js" />
+    <None Include="wwwroot\assets\js\bootbox\bootbox.js" />
+    <None Include="wwwroot\assets\js\bootstrap.js" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\charts\chartjs\chart.js" />
+    <None Include="wwwroot\assets\js\charts\chartjs\chart.min.js" />
+    <None Include="wwwroot\assets\js\charts\chartjs\chartjs-init.js" />
+    <None Include="wwwroot\assets\js\charts\easypiechart\easypiechart-init.js" />
+    <None Include="wwwroot\assets\js\charts\easypiechart\jquery.easypiechart.js" />
+    <None Include="wwwroot\assets\js\charts\easypiechart\jquery.easypiechart.min.js" />
+    <None Include="wwwroot\assets\js\charts\easypiechart\jquery.easypiechart.min.js.map" />
+    <None Include="wwwroot\assets\js\charts\flot\flot-init.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.axislabels.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.categories.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.categories.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.crosshair.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.crosshair.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.fillbetween.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.fillbetween.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.min.js.map" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.orderbars.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.pie.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.pie.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.resize.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.resize.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.selection.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.selection.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.stack.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.stack.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.time.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.time.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.tooltip.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.tooltip.min.js" />
+    <None Include="wwwroot\assets\js\charts\flot\jquery.flot.tooltip.min.js.map" />
+    <None Include="wwwroot\assets\js\charts\morris\morris-init.js" />
+    <None Include="wwwroot\assets\js\charts\morris\morris.js" />
+    <None Include="wwwroot\assets\js\charts\morris\raphael-2.0.2.min.js" />
+    <None Include="wwwroot\assets\js\charts\sparkline\jquery.sparkline.js" />
+    <None Include="wwwroot\assets\js\charts\sparkline\sparkline-init.js" />
+    <None Include="wwwroot\assets\js\colorpicker\jquery.minicolors.js" />
+    <None Include="wwwroot\assets\js\datatable\datatables-init.js" />
+    <None Include="wwwroot\assets\js\datatable\dataTables.bootstrap.js" />
+    <None Include="wwwroot\assets\js\datatable\datatables.bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\datatable\dataTables.bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\js\datatable\dataTables.tableTools.js" />
+    <None Include="wwwroot\assets\js\datatable\datatables.tabletools.min.js" />
+    <None Include="wwwroot\assets\js\datatable\dataTables.tableTools.min.js.map" />
+    <None Include="wwwroot\assets\js\datatable\jquery.dataTables.js" />
+    <None Include="wwwroot\assets\js\datatable\jquery.datatables.min.js" />
+    <None Include="wwwroot\assets\js\datatable\zeroclipboard.js" />
+    <None Include="wwwroot\assets\js\datetime\bootstrap-datepicker.js" />
+    <None Include="wwwroot\assets\js\datetime\bootstrap-timepicker.js" />
+    <None Include="wwwroot\assets\js\datetime\daterangepicker.js" />
+    <None Include="wwwroot\assets\js\datetime\moment.js" />
+    <None Include="wwwroot\assets\js\dropzone\dropzone.min.js" />
+    <None Include="wwwroot\assets\js\editors\summernote\summernote.js" />
+    <None Include="wwwroot\assets\js\editors\wysiwyg\bootstrap-wysiwyg.js" />
+    <None Include="wwwroot\assets\js\editors\wysiwyg\jquery.hotkeys.js" />
+    <None Include="wwwroot\assets\js\editors\wysiwyg\prettify.js" />
+    <None Include="wwwroot\assets\js\fuelux\spinbox\fuelux.spinbox.js" />
+    <None Include="wwwroot\assets\js\fuelux\spinbox\fuelux.spinbox.min.js" />
+    <None Include="wwwroot\assets\js\fuelux\spinbox\fuelux.spinbox.min.js.map" />
+    <None Include="wwwroot\assets\js\fuelux\treeview\tree-custom.min.js" />
+    <None Include="wwwroot\assets\js\fuelux\treeview\treeview-init.js" />
+    <None Include="wwwroot\assets\js\fuelux\wizard\wizard-custom.js" />
+    <None Include="wwwroot\assets\js\fuelux\wizard\wizard-custom.min.js" />
+    <None Include="wwwroot\assets\js\fuelux\wizard\wizard-custom.min.js.map" />
+    <None Include="wwwroot\assets\js\fullcalendar\fullcalendar.js" />
+    <None Include="wwwroot\assets\js\fullcalendar\fullcalendar.min.js" />
+    <None Include="wwwroot\assets\js\fullcalendar\jquery-ui.custom.min.js" />
+    <None Include="wwwroot\assets\js\fullcalendar\moment.min.js" />
+    <None Include="wwwroot\assets\js\inputmask\jasny-bootstrap.js" />
+    <None Include="wwwroot\assets\js\inputmask\jasny-bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\jquery-ui-1.10.4.custom.js" />
+    <None Include="wwwroot\assets\js\jquery-ui-1.10.4.custom.min.js" />
+    <None Include="wwwroot\assets\js\jquery.min.js" />
+    <None Include="wwwroot\assets\js\knob\jquery.knob.js" />
+    <None Include="wwwroot\assets\js\nestable\jquery.nestable.min.js" />
+    <None Include="wwwroot\assets\js\select2\select2.js" />
+    <None Include="wwwroot\assets\js\skins.min.js" />
+    <None Include="wwwroot\assets\js\slider\jqrangeslider\jqallrangesliders-withruler-min.js" />
+    <None Include="wwwroot\assets\js\slider\jquery.nouislider.js" />
+    <None Include="wwwroot\assets\js\slimscroll\jquery.slimscroll.js" />
+    <None Include="wwwroot\assets\js\slimscroll\jquery.slimscroll.min.js" />
+    <None Include="wwwroot\assets\js\slimscroll\jquery.slimscroll.min.js.map" />
+    <None Include="wwwroot\assets\js\tagsinput\bootstrap-tagsinput.js" />
+    <None Include="wwwroot\assets\js\textarea\jquery.autosize.js" />
+    <None Include="wwwroot\assets\js\textarea\jquery.autosize.min.js" />
+    <None Include="wwwroot\assets\js\toastr\toastr.js" />
+    <None Include="wwwroot\assets\js\validation\bootstrapvalidator.js" />
+    <None Include="wwwroot\assets\swf\copy_csv_xls.swf" />
+    <None Include="wwwroot\assets\swf\copy_csv_xls_pdf.swf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Bookings\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+
+</Project>

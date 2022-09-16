@@ -1,0 +1,37 @@
+﻿@model sea_booking.Models.ShipClasses
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ShipClasses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxSeatsNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxSeatsNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class.ClassName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ship.ShipName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>

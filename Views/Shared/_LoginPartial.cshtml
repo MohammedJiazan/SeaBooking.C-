@@ -1,0 +1,128 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+@inject RoleManager<IdentityRole> RoleManager
+@*@inject UserManager<ApplicationUser> UserManager*@
+    <html lang="en">
+    <!-- Head -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Sea Booking</title>
+
+        <meta name="description" content="blank page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="~/assets/img/Logo11.png" type="image/x-icon">
+
+        <!--Basic Styles-->
+        <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+        <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" />
+
+        <!--Fonts-->
+        <link href="../fonts.googleapis.com/css@family=open+sans_3a300italic,400italic,600italic,700italic,400,600,700,300.css"
+              rel="stylesheet" type="text/css">
+
+        <!--Beyond styles-->
+        <link id="beyond-link" href="~/assets/css/beyond.min.css" rel="stylesheet" />
+        <link href="~/assets/css/demo.min.css" rel="stylesheet" />
+        <link href="~/assets/css/typicons.min.css" rel="stylesheet" />
+        <link href="~/assets/css/animate.min.css" rel="stylesheet" />
+        <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+        <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+        <script src="~/assets/js/skins.min.js"></script>
+    </head>
+    <body>
+       
+        @if (SignInManager.IsSignedIn(User))
+        {
+
+
+
+            var user = User.IsInRole("Administrator");
+
+
+            if (user)
+            {
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-users"></i>
+                <span class="menu-text"> Users </span>
+
+                <i class="menu-expand"></i>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a asp-area="Identity" asp-page="/Account/Register">Add User Account</a>
+                </li>
+                <li>
+                    <a asp-action="index" asp-controller="UserManagment">Users Managment</a>
+                </li>
+            </ul>
+        </li>
+                <!--Ships-->
+                <li>
+                    <a href="#" class="menu-dropdown">
+                        <i class="menu-icon fa fa-ship"></i>
+                        <span class="menu-text"> Ships </span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a asp-action="Index" asp-controller="Ships">Ships Managment</a>
+                        </li>
+                        <li>
+                            <a asp-action="Index" asp-controller="ShipClasses">Ships and classes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="menu-dropdown">
+                        <i class="menu-icon fa fa-level-up"></i>
+                        <span class="menu-text"> Classes </span>
+
+                        <i class="menu-expand"></i>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a asp-action="Index" asp-controller="Classes">Classes Managment</a>
+                        </li>
+                        @*<li>
+                            <a asp-action="Details" asp-controller="Ships">Details</a>
+                        </li>*@
+                    </ul>
+                </li>
+            }
+        }
+    </body>
+    </html>
+
+    @*<ul class="navbar-nav">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                </form>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+            </li>
+        }
+    </ul>*@

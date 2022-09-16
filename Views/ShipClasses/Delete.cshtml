@@ -1,0 +1,40 @@
+﻿@model sea_booking.Models.ShipClasses
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ShipClasses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxSeatsNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxSeatsNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Class.ClassName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ship.ShipName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </form>
+</div>

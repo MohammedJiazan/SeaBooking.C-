@@ -1,0 +1,241 @@
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+.background_img {  
+    z-index: -1;
+    position:relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+   }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5;
+    
+}
+
+.slideshow-container {
+  position: relative;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    background-size: cover;
+    
+}
+.logo-img{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px; 
+    
+    
+}
+.active {
+/*  background-color: #717171;*/
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  opacity: 1;
+  position: relative;
+  display: block;
+}
+  
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+ 
+  header {
+    background: rgba(6, 58, 94, 0.4);
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    padding-top: 15px;
+    width: 100%;
+    height: 10%;
+/*    background-size: cover;*/
+    
+  }
+ 
+  nav {
+    /* the following lines are not from my video, but add Edge support */
+/*    position: relative;*/
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3/5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+ 
+  nav ul {
+    display: flex;
+    margin-top: 7px;
+    list-style-type: none;
+  }
+ 
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+ 
+ nav li a:hover, a.active {
+     height: 25px;
+     width: 100%;
+     padding-right: 5px;
+     padding-left: 5px;
+     padding-top: 2px;
+     border-radius: 50px;
+     transition: .5s ease-in-out;
+     color: #41d0d9;
+    background: #fff;
+    } 
+
+
+element.style {
+    height: 33px;
+}
+.swiper-container .swiper-bottom-panel {
+    position: absolute;
+    left: 50%;
+    bottom: 8;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.swiper-container .swiper-bottom-panel:before {
+    right: 100%;
+    margin-right: -2px;
+}
+.swiper-container .swiper-bottom-panel:before{
+    content: '';
+    position: absolute;
+    width: 650%;
+    height: 100%;
+    background: #fff;
+    margin-bottom: -1px;
+}
+
+.swiper-container .swiper-bottom-panel:after {
+    left: 100%;
+    margin-left: -2px;
+}
+.swiper-container .swiper-bottom-panel:after{
+    
+ content: '';
+    position: absolute;
+    width: 609%;
+    height: 100%;
+    background: #fff;
+    bottom: 1px;
+    margin-bottom: -1px;
+    }
+.swiper-container .swiper-bottom-panel .swiper-bottom-panel-svg-wrap .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    cursor: pointer;
+}
+
+.material-icons-ico, [class*="material-icons-"]:before {
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40;
+    color: white
+}
+
+.material-icons-expand_more:before {
+    content: "\e5cf";
+}
+    .material-icons-expand_more:before {
+    content: "\e5cf";
+}
+
+
+div.transbox {
+  background-color: black;
+  border: 120px solid black;
+  opacity: 0.4;
+  margin-top: 200px;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 5px;
+
+}
+
+.frame {
+/*  margin: 7%;*/
+    border-radius: 7px;
+     border: 90px solid white;
+  font-weight: bold;
+   background-color: white;
+   margin-top: -210px;
+  margin-left: 170px;
+  margin-right: 700px;
+    height: 50px;
+    opacity: 0.9
+}
+
+
+div.one {
+   border: 1px solid #22a3ab;
+  border-radius: 5px;
+  margin-top: -85px;
+    margin-left: -70px;
+    margin-right: 160px;
+    box-shadow: 0px 8px 16px 0px #22a3ab
+ 
+    }
+    .two {
+ width: 210px; 
+height: 30px;
+  border-radius: 5px;
+   margin-top: 10px;
+    margin-left: -85px;
+    margin-bottom: -20%;
+    font-size: 90%;
+      
+    }
+
+.three {
+   border: 1px solid #22a3ab;
+  border-radius: 5px;
+  margin-top: -108px;
+    margin-left: 160px;
+    margin-right: -70px;
+    height: 108px;
+    box-shadow: 0px 8px 16px 0px #22a3ab
+    }
+
+    
+.data_depart
+    {
+        margin-left: 450px;
+        margin-top: -160px;
+        font-size: 20;
+    }
+
+    .data_return{
+         margin-left: 650px;
+        margin-top: -97px;
+        font-size: 20;
+    }
+    

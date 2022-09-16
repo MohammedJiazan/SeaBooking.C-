@@ -1,0 +1,255 @@
+﻿@model IEnumerable<sea_booking.Models.Booking>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>Master Page</title>
+
+    <meta name="description" content="blank page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="~/assets/img/favicon.png" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="../fonts.googleapis.com/css@family=open+sans_3a300italic,400italic,600italic,700italic,400,600,700,300.css"
+          rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="~/assets/css/beyond.min.css" rel="stylesheet" />
+    <link href="~/assets/css/demo.min.css" rel="stylesheet" />
+    <link href="~/assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="~/assets/css/animate.min.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="~/assets/js/skins.min.js"></script>
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="table-toolbar">
+                            <br />
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="widget">
+                                        <div class="widget-header bordered-top bordered-palegreen">
+                                            <span class="widget-caption">Filtering</span>
+                                        </div>
+                                        <form asp-action="Report">
+                                            <div class="widget-body">
+
+                                                <div class="form-group row">
+
+
+
+                                                    <div class="col-sm-3 mb-3 mb-sm-0">
+                                                        @Html.TextBox("fromDate", "{0:yyyy-MM-dd}", new { @class = "form-control   col-md-9 col xs", @type = "date", @id = "dateinput", @value = "8/16/2020" })
+                                                    </div>
+
+
+                                                    <div class="col-sm-3 ">
+
+                                                        @Html.TextBox("toDate", "{0:yyyy-MM-dd}", new { @class = "form-control col xs col-md-9", @type = "date", @id = "dateinput", @value = "8/16/2020" })
+
+                                                    </div>
+
+                                                    <div class="col-sm-3 hidden-print">
+                                                        @Html.DropDownList("tripId", null, "All Trips", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+
+
+
+                                                    <div class="col-sm-3 hidden-print">
+                                                        @Html.DropDownList("passangerId", null, "All Passangers", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+                                                    </div>
+
+
+                                                    <div class="col-sm-3 hidden-print">
+
+                                                        @Html.DropDownList("classId", null, "All Classes", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+                                                    </div>
+
+                                                    <div class="col-sm-3 hidden-print">
+                                                        @Html.DropDownList("shipId", null, "All Ships", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+
+
+
+                                                    <div class="col-sm-3 hidden-print">
+                                                        @Html.DropDownList("fromStationId", null, "All Stations", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+                                                    </div>
+
+
+                                                    <div class="col-sm-3 hidden-print">
+
+                                                        @Html.DropDownList("toStationId", null, "All Stations", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+                                                    </div>
+                                                    <div class="col-sm-3 hidden-print">
+
+                                                        @Html.DropDownList("tripStatus", null, "All", htmlAttributes: new { @class = "form-control col xs col-md-9", @id = "select" })
+
+                                                    </div>
+                                                </div>
+                                 
+                                                <div class="form-group row">
+                                                    <div class="col-sm-3 hidden-print">
+                                                        <p class="col-md-1 hidden-print"><input type="submit" value="Filter" class="btn btn-success " id="save" /></p>
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <p>Tickets</p>
+                                                    <span class="input-icon">
+                                                        <input type="text" class="form-control checkbox input-sm" id="myInput">
+                                                        <i class="fa fa-ship"></i>
+                                                    </span>
+                                                </div>
+                                                <button class="btn btn-purple" id="myButton">
+                                                    <i class="glyphicon glyphicon-search white"></i> Search
+                                                </button>
+                                            </div><!--Widget Body-->
+
+                                        </form>
+                                    </div><!--Widget-->
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <div class="widget">
+                                        <div class="widget-header ">
+                                            <span class="widget-caption">Tickets Table</span>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="table-toolbar">
+
+                                                <div class="btn-group pull-right">
+
+                                                </div>
+                                            </div>
+                                            <table class="table table-striped table-hover table-bordered" id="editabledatatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            #
+                                                        </th>
+                                                        <th>
+                                                            Ticket Number
+                                                        </th>
+                                                        <th>
+                                                            Trip Number
+                                                        </th>
+                                                        <th>
+                                                            Passanger Name
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>
+                                                            Trip DateTime
+                                                        </th>
+                                                        <th>
+                                                            Commands
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="myTable">
+                                                    @foreach (var item in Model)
+                                                    {
+                                                        <tr>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Id)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.TicketId)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.TripId)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Passanger.Name)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.TotalPayment)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Trip.TripDateTime)
+                                                            </td>
+                                                            <td>
+                                                                <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.Id">Edit</a> |
+                                                                <a asp-action="Details" class="btn btn-purple" asp-route-id="@item.Id">Details</a> |
+                                                                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a> |
+                                                                @if (!item.isConfirmed)
+                                                                {
+                                                                    @:|
+                                                                    @Html.ActionLink("Complate the reservation", "SelectSeat", "SeetBookings", new { bookingId = item.Id, tripId = item.TripId });
+
+                                                                }
+
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Basic Scripts-->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    @*<script src="~/assets/js/slimscroll/jquery.slimscroll.min.js"></script>*@
+
+    <!--Beyond Scripts-->
+    <script src="~/assets/js/beyond.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myButton").click(function () {
+                var value = $("#myInput").val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+
+    <!--Page Related Scripts-->
+
+</body>
+<!--  /Body -->
+</html>

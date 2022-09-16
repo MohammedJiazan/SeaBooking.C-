@@ -1,0 +1,159 @@
+﻿@model sea_booking.Models.Trip
+<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.6
+Version: 1.6.0
+Purchase: https://wrapbootstrap.com/theme/beyondadmin-adminapp-angularjs-mvc-WB06R48S4
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>Master Page</title>
+
+    <meta name="description" content="blank page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="~/assets/img/favicon.png" type="image/x-icon">
+
+    <!--Basic Styles-->
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <link href="../fonts.googleapis.com/css@family=open+sans_3a300italic,400italic,600italic,700italic,400,600,700,300.css"
+          rel="stylesheet" type="text/css">
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="~/assets/css/beyond.min.css" rel="stylesheet" />
+    <link href="~/assets/css/demo.min.css" rel="stylesheet" />
+    <link href="~/assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="~/assets/css/animate.min.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="~/assets/js/skins.min.js"></script>
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <div class="widget">
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 col-xs-12">
+                                <div class="widget">
+                                    <div class="widget-header bordered-top bordered-palegreen">
+                                        <span class="widget-caption">Create Trip</span>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="collapse in">
+                                            <form asp-action="Edit">
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                @*<div class="form-group">
+                                                    <label asp-for="Id" class="control-label">Trip Number</label>
+                                                    <span class="input-icon">
+                                                        <input asp-for="Id" class="form-control" />
+                                                        <span asp-validation-for="Id" class="text-danger"></span>
+                                                        <i class="fa fa-buysellads"></i>
+                                                    </span>
+                                                </div>*@
+                                                <div class="form-group">
+                                                    <label asp-for="Price" class="control-label"></label>
+                                                    <span class="input-icon">
+                                                        <input asp-for="Price" class="form-control" placeholder="Enter Price" />
+                                                        <span asp-validation-for="Price" class="text-danger"></span>
+                                                        <i class="fa fa-money"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label asp-for="TripDateTime" class="control-label">Date</label>
+                                                    <span class="input-icon">
+                                                        <input asp-for="TripDateTime" class="form-control" />
+                                                        <span asp-validation-for="TripDateTime" class="text-danger"></span>
+                                                        <i class="fa fa-calculator"></i>
+                                                    </span>
+                                                </div>
+                                                @*<div class="form-group">
+                                                    <label asp-for="DelayDateTime" class="control-label">Delay DateTime</label>
+                                                    <span class="input-icon">
+                                                        <input asp-for="DelayDateTime" class="form-control" />
+                                                        <span asp-validation-for="DelayDateTime" class="text-danger"></span>
+                                                        <i class="fa fa-calculator"></i>
+                                                    </span>
+                                                </div>*@
+                                                <div class="form-group">
+                                                    <label asp-for="ShipId" class="control-label">Ship</label>
+                                                    <span class="input-icon">
+                                                        <select asp-for="ShipId" class="form-control" asp-items="ViewBag.ShipId"></select>
+                                                        <i class="fa fa-paper-plane-o"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label asp-for="From" class="control-label">From</label>
+                                                    <span class="input-icon">
+                                                        <select asp-for="From" class="form-control" asp-items="ViewBag.From"></select>
+                                                        <i class="fa fa-paper-plane-o"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label asp-for="To" class="control-label">To</label>
+                                                    <span class="input-icon">
+                                                        <select asp-for="To" class="form-control" asp-items="ViewBag.To"></select>
+                                                        <i class="fa fa-paper-plane-o"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label asp-for="isOpen" class="control-label">Status Trip</label>
+                                                    <span class="input-icon">
+                                                        <input asp-for="isOpen" class="form-control">
+                                                        <i class="fa fa-buysellads"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label asp-for="Note" class="control-label">Note</label>
+                                                    <input asp-for="Note" class="form-control" placeholder="Enter Details" />
+                                                    <span asp-validation-for="Note" class="text-danger"></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </div><!--Widget Body-->
+                </div><!--Widget-->
+            </div>
+        </div>
+    </div>
+    <div>
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    <!--Basic Scripts-->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    @*<script src="~/assets/js/slimscroll/jquery.slimscroll.min.js"></script>*@
+
+    <!--Beyond Scripts-->
+    <script src="~/assets/js/beyond.min.js"></script>
+
+    <!--Page Related Scripts-->
+
+</body>
+<!--  /Body -->
+</html>
